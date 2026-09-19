@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0f172a">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MY DAY</p>
+        <h1>Todo List</h1>
+        <p id="dateText" class="date"></p>
+      </div>
+      <div class="progress-ring" aria-label="Progress">
+        <span id="progressPercent">0%</span>
+      </div>
+    </header>
+
+    <section class="summary-card">
+      <div>
+        <span class="summary-label">Today's progress</span>
+        <strong id="progressText">0 of 0 completed</strong>
+      </div>
+      <div class="bar"><div id="progressBar"></div></div>
+    </section>
+
+    <section class="composer">
+      <input id="taskInput" type="text" maxlength="120" placeholder="What do you need to do?" autocomplete="off">
+      <button id="addButton" type="button">Add</button>
+    </section>
+
+    <nav class="filters" aria-label="Task filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">Active</button>
+      <button class="filter" data-filter="completed">Completed</button>
+    </nav>
+
+    <section id="taskList" class="task-list" aria-live="polite"></section>
+
+    <section id="emptyState" class="empty-state">
+      <div class="empty-icon">✓</div>
+      <h2>Nothing here yet</h2>
+      <p>Add your first task above.</p>
+    </section>
+
+    <footer class="footer">
+      <button id="clearCompleted" type="button">Clear completed</button>
+      <span id="taskCount">0 tasks</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

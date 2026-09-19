@@ -1,0 +1,8 @@
+{
+  "appId": "com.ademchebaane.todolist",
+  "appName": "Todo List",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
